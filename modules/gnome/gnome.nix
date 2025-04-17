@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 {
-  programs.hyprland.enable = true; # enable Hyprland
+  # programs.hyprland.enable = true; # enable Hyprland
+
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+
+  services.accounts-daemon.enable = true;
+  services.gnome.gnome-online-accounts.enable = true;
 
   environment.systemPackages = [
     # ... other packages
@@ -16,6 +22,7 @@
      pkgs.gnomeExtensions.logo-menu
      pkgs.gnomeExtensions.switcher
      pkgs.gnome-tweaks
+     pkgs.google-drive-ocamlfuse
    # pkgs.gnomeExtensions.forge #tiling stuff
   ];
 

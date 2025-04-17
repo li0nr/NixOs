@@ -19,6 +19,10 @@
         modules = [
             ./hosts/pc/configuration.nix
             ./modules/services/xremap.nix
+            ./modules/services/virt.nix
+            ./modules/services/syncthing.nix
+            ./modules/nvim.nix
+            ./modules/gnome/gnome.nix
       ];
     };
   };

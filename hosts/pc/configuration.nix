@@ -8,8 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./nvim.nix
-      ./gnome.nix
     ];
 
   # Bootloader.
@@ -47,9 +45,6 @@
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   # services.xserver.enable = true;
-  services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   # services.displayManager.sddm.enable = true;
@@ -96,6 +91,7 @@
    alacritty
    ghostty
    atuin
+   lazygit
    zsh
    bash
    fzf 
@@ -103,11 +99,16 @@
    starship
    google-chrome
    zoxide
-   syncthing
    slack
    telegram-desktop
    rclone
    btop
+
+    # ios sutff 
+   libimobiledevice
+   ifuse
+## to restore ios device 
+#    idevicerestore
   ];
 
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -124,11 +125,32 @@ fonts.packages = with pkgs; [
 ];
 
   # List services that you want to enable:
-
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-  services.accounts-daemon.enable = true;
-  services.gnome.gnome-online-accounts.enable = true;
+
+  #disable the bluethooth on pcie card
+  services.udev.extraRules = ''
+      SUBSYSTEM=="usb", ATTR{idVendor}=="8087", ATTR{idProduct}=="0a2a", ATTR{authorized}="0"
+  '';
+
+  services.usbmuxd = {
+    enable = true;
+    package = pkgs.usbmuxd2;
+  };
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    # Add any missing dynamic libraries for unpackaged programs
+    # here, NOT in environment.systemPackages
+    libgudev
+    gcc_multi
+    dub
+    libadwaita
+    libimobiledevice
+    libplist
+    harfbuzz
+    dmd
+  ];
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];

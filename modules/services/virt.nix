@@ -1,8 +1,5 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, ... }:
 {
-  imports =
-  [ inputs.xremap-flake.nixosModules.default ];
-
   environment.systemPackages = [
    pkgs.virt-manager
    pkgs.docker
