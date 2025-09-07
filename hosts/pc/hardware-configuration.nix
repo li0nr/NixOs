@@ -24,6 +24,10 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
+  fileSystems."/BackUp" =
+    { device = "/dev/disk/by-uuid/06E0D489E0D47FFB";
+    };
+
   swapDevices =
     [ { device = "/dev/disk/by-uuid/629a7c53-6268-4504-92dc-d0ed9255bdae"; }
     ];
