@@ -10,20 +10,25 @@
 
   environment.systemPackages = [
     # ... other packages
-     pkgs.gnomeExtensions.dash-to-dock
      pkgs.gnomeExtensions.clipboard-history
-     pkgs.gnomeExtensions.tactile
-     pkgs.gnomeExtensions.blur-my-shell
-     pkgs.gnomeExtensions.unite
-     pkgs.gnomeExtensions.just-perfection
-     pkgs.gnomeExtensions.search-light
-     pkgs.gnomeExtensions.wallpaper-slideshow
+     pkgs.gnomeExtensions.gtile # tiling or snapping
+     pkgs.gnomeExtensions.search-light # app launcher
      pkgs.gnomeExtensions.fuzzy-app-search
-     pkgs.gnomeExtensions.logo-menu
-     pkgs.gnomeExtensions.switcher
      pkgs.gnome-tweaks
-     pkgs.google-drive-ocamlfuse
-   # pkgs.gnomeExtensions.forge #tiling stuff
+     # visuals
+     pkgs.gnomeExtensions.top-bar-organizer
+     pkgs.gnomeExtensions.just-perfection # also top bar stuff
+     pkgs.gnomeExtensions.wallpaper-slideshow
+     pkgs.gnomeExtensions.unite # top bar stuff
+     pkgs.gnomeExtensions.dash-to-dock # dock stuff also visual
+     pkgs.gnomeExtensions.blur-my-shell
+     pkgs.gnomeExtensions.logo-menu
+     # pkgs.gnomeExtensions.switcher
+     # tiling stuff currently using gtile
+     # pkgs.gnomeExtensions.tactile
+     # pkgs.gnomeExtensions.forge 
+     # pkgs.gnomeExtensions.quick-settings-tweaker
+     # pkgs.google-drive-ocamlfuse
   ];
 
   environment.gnome.excludePackages = with pkgs; [

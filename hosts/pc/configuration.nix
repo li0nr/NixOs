@@ -52,10 +52,14 @@
   # services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
+  services.xserver = {
+  xkb.layout = "us,il";
+  xkbVariant = "";
+  # xkbOptions = "grp:win_space_toggle";
+  # gsettings reset org.gnome.desktop.input-sources xkb-options
+  # gsettings reset org.gnome.desktop.input-sources sources
+  # gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Shift>Alt_L']"/<Super>space
+};
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -103,9 +107,11 @@
    slack
    telegram-desktop
    rclone
-   btop
-
-    # ios sutff 
+   btop-rocm
+   libsForQt5.okular
+   xorg.xprop #-- need for okular
+   # ios sutff 
+   cura-appimage
    libimobiledevice
    ifuse
 ## to restore ios device 

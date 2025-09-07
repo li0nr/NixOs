@@ -1,17 +1,17 @@
 [Logo-menu]
-menu-button-icon-image=23
+menu-button-icon-image=18
 menu-button-icon-size=18
-symbolic-icon=true
+symbolic-icon=false
 use-custom-icon=false
 
 [azwallpaper]
 bing-wallpapers-downloaded=@as []
-slideshow-current-wallpapper='a_building_with_many_windows.jpg'
-slideshow-directory='/home/li0nr/walls/architecture'
+slideshow-current-wallpapper='Takayama, Japan.png'
+slideshow-directory='/home/li0nr/GoogleDrive/WallPapers'
 slideshow-slide-duration=(0, 30, 0)
-slideshow-time-of-slide-start=uint64 1743411452065
+slideshow-time-of-slide-start=uint64 1757238534882
 slideshow-timer-remaining=1800
-slideshow-wallpaper-queue=['a_pillar_with_a_stone_pillar_and_a_blue_sky.jpg', 'a_statue_of_a_man_in_a_fountain.jpg', 'a_close_up_of_a_bridge.jpg', 'a_city_with_many_tall_buildings.jpg', 'a_colorful_buildings_on_a_cliff_by_the_water.jpg', 'a_narrow_street_with_shops_and_signs.png', 'a_city_alley_with_buildings_and_power_lines.jpg', 'a_building_with_many_balconies.jpg', 'a_building_with_many_windows_01.jpg', 'a_city_skyline_at_night_01.jpg', 'a_stone_path_leading_to_a_building.jpg', 'a_tall_building_with_many_windows_with_Flatiron_Building_in_the_background.jpg', 'a_group_of_birds_flying_in_the_sky_over_a_city.jpg', 'a_city_at_night_with_lights.jpg', 'a_building_with_shutters_on_windows.jpg', 'a_building_with_a_drone_on_top.jpg', 'a_tall_building_with_balconies.jpg', 'a_white_tower_with_a_blue_sky.jpg', 'a_group_of_tall_buildings_in_a_city.jpg', 'a_tall_buildings_with_power_lines_in_the_sky.jpg', 'a_building_with_a_balcony.jpeg', 'a_city_at_night_with_many_tall_buildings.jpg', 'a_building_with_a_sign_on_it.jpg', 'a_building_with_a_window.jpg', 'a_building_with_many_windows_02.jpg', 'people_walking_on_a_platform.jpg', 'a_multi-colored_building_with_many_windows.jpg', 'a_group_of_windmills_in_a_field.jpg', 'a_city_with_trees_and_water.jpg', 'a_triangular_building_with_a_blue_sky.jpg', 'a_road_with_traffic_barriers_on_the_side_of_the_road.jpg', 'a_city_with_tall_buildings.jpg', 'a_building_with_balconies.jpg', 'a_train_on_the_tracks.jpg', 'a_train_on_a_track.jpg', 'a_city_by_the_water.jpg', 'a_city_with_tall_buildings_and_water_in_the_background.jpg']
+slideshow-wallpaper-queue=['Misty Metropolis.jpg', 'beach_landscape.png', 'ny-bridge.png', 'a_donut_with_sprinkles_on_top.jpg', 'gruvbox_forest-4.png', 'a_bridge_with_clouds_in_the_sky.jpg', 'dark lake forest.jpg', 'crashed-airplane.jpg', 'seatle skyline.jpg', 'minimal-alone-on-edge.png', 'a_black_and_white_building_with_a_fire_escape.jpg', 'japan-train.jpg', 'panda in blizzard.png', 'blue-red-4k.png', 'hot air ballon.jpg', 'The Room.png', 'a_tree_in_a_body_of_water_with_mountains_in_the_background.jpg', 'Ghost Tower in the Mist.jpg', 'City in the Mist.jpg', 'autumn forest.jpeg', 'Deerfield Beach International Fishing Pier, Florida.png', 'baby-blue-creature.jpeg', 'new york.png', 'Islamic-art Doha.jpeg', 'minimal-windmill.png', 'Bear&Dear.jpg', 'red-forest.jpg', 'ny-sunset-skyline.jpeg', 'Cherry Blossom.png', 'grean-leaf.png', 'blue creature.jpg', 'lake.jpg', 'a_snowy_mountain_tops_with_blue_sky.jpg', 'bright-forest.jpg', 'Sunset.png', 'lake-forest-mountain.jpg', 'ny-spidy-pov.jpg', 'pond_shed.png', 'girl in bed.jpeg', 'urban - glass.jpg', 'messy cool room.png', 'Gon freecss.png', 'Hallstatt Austria.png', 'lake-house-sunset.jpg']
 
 [blur-my-shell]
 settings-version=2
@@ -53,17 +53,34 @@ sigma=30
 cache-size=1
 disable-down-arrow=true
 display-mode=3
-history-size=50
+enable-keybindings=true
+history-size=10
+ignore-password-mimes=false
+move-item-first=false
+next-entry=@as []
+prev-entry=@as []
+private-mode=false
+strip-text=true
 toggle-menu=['<Alt>v']
+topbar-preview-size=20
 window-width-percentage=20
 
+[clipboard-indicator]
+cache-size=1
+confirm-clear=false
+move-item-first=true
+strip-text=true
+toggle-menu=['<Alt>v']
+
 [dash-to-dock]
+autohide-in-fullscreen=true
 background-opacity=0.80000000000000004
-dash-max-icon-size=41
+dash-max-icon-size=32
 dock-fixed=false
 dock-position='BOTTOM'
 height-fraction=0.33000000000000002
 hide-tooltip=false
+intellihide-mode='ALL_WINDOWS'
 isolate-monitors=false
 multi-monitor=false
 preferred-monitor=-2
@@ -77,8 +94,12 @@ show-show-apps-button=true
 show-windows-preview=true
 
 [forge]
+auto-exit-tabbed=true
 css-last-update=uint32 37
-tiling-mode-enabled=false
+float-always-on-top-enabled=true
+focus-border-toggle=false
+quick-settings-enabled=true
+tiling-mode-enabled=true
 
 [forge/keybindings]
 con-split-horizontal=['<Super>z']
@@ -88,6 +109,7 @@ con-stacked-layout-toggle=['<Shift><Super>s']
 con-tabbed-layout-toggle=['<Shift><Super>t']
 con-tabbed-showtab-decoration-toggle=['<Control><Alt>y']
 focus-border-toggle=['<Super>x']
+mod-mask-mouse-tile='Ctrl'
 prefs-tiling-toggle=['<Super>w']
 window-focus-down=['<Super>j']
 window-focus-left=['<Super>h']
@@ -107,7 +129,7 @@ window-resize-right-decrease=['<Shift><Control><Super>y']
 window-resize-right-increase=['<Control><Super>o']
 window-resize-top-decrease=['<Shift><Control><Super>u']
 window-resize-top-increase=['<Control><Super>i']
-window-snap-center=['<Control><Alt>c']
+window-snap-center=['<Control><Super>Return']
 window-snap-one-third-left=['<Control><Alt>d']
 window-snap-one-third-right=['<Control><Alt>g']
 window-snap-two-third-left=['<Control><Alt>e']
@@ -121,27 +143,41 @@ window-toggle-always-float=['<Shift><Super>c']
 window-toggle-float=['<Super>c']
 workspace-active-tile-toggle=['<Shift><Super>w']
 
+[gtile]
+auto-close=true
+preset-resize-1=['<Control><Super>Return']
+preset-resize-10=['<Control><Super>j']
+preset-resize-4=['<Control><Super>h']
+preset-resize-6=['<Control><Super>l']
+preset-resize-9=['<Control><Super>k']
+resize1='5x5 2:2 4:4, 1:1 5:5'
+resize10='4x4 3:3 4:4, 1:1 2:2'
+resize9='4x4 3:1 4:2,1:3 2:4'
+show-icon=false
+window-spacing=3
+
 [just-perfection]
 accent-color-icon=false
 accessibility-menu=true
-activities-button=true
+activities-button=false
 alt-tab-window-preview-size=0
 animation=1
 background-menu=true
 calendar=true
 clock-menu=true
 clock-menu-position=1
-clock-menu-position-offset=20
+clock-menu-position-offset=0
 controls-manager-spacing-size=0
 dash=true
 dash-icon-size=0
 double-super-to-appgrid=true
-invert-calendar-column-items=true
+invert-calendar-column-items=false
 keyboard-layout=true
 max-displayed-search-results=0
 osd=true
 panel=true
 panel-in-overview=true
+quick-settings-dark-mode=true
 ripple-box=true
 search=true
 show-apps-button=true
@@ -159,6 +195,7 @@ workspace-background-corner-size=0
 workspace-popup=true
 workspace-switcher-should-show=false
 workspaces-in-app-grid=true
+world-clock=true
 
 [openbar]
 bguri='file:///nix/store/3hg8dc4l1z278qb3g1n11ihj0crzzy5l-simple-dark-gray-2016-02-19/share/backgrounds/nixos/nix-wallpaper-simple-dark-gray.png'
@@ -201,42 +238,60 @@ open-folder=false
 pause-timer=false
 request-new-wallpaper=false
 
+[switcher]
+launcher-stats='{"org.gnome.SystemMonitor.desktop":1}'
+
 [system-monitor]
+show-cpu=true
+show-download=false
+show-memory=true
 show-swap=false
+show-upload=false
 
 [tactile]
 col-2=0
 col-3=0
+layout-2-col-0=1
+layout-2-col-1=1
+layout-2-col-2=0
+layout-2-col-3=0
+layout-2-row-0=0
+layout-2-row-1=0
 layout-3-col-0=1
 layout-3-col-1=1
 layout-3-col-2=0
 layout-3-col-3=0
 layout-3-row-1=1
 layout-3-row-2=0
-monitor-0-layout=3
+monitor-0-layout=2
 row-0=1
 row-1=1
+
+[top-bar-organizer]
+center-box-order=['Clipboard History Indicator']
+left-box-order=['LogoMenu', 'uniteAppMenu', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'activities']
+right-box-order=['a11y', 'uniteTrayIndicator', 'gTile@vibou', 'drive-menu', 'screenRecording', 'screenSharing', 'dwellClick', 'keyboard', 'quickSettings', 'dateMenu']
 
 [unite]
 app-menu-ellipsize-mode='middle'
 app-menu-max-width=1
 autofocus-windows=false
 enable-titlebar-actions=false
-extend-left-box=false
+extend-left-box=true
 greyscale-tray-icons=false
-hide-activities-button='always'
+hide-activities-button='auto'
 hide-app-menu-icon=false
-hide-window-titlebars='always'
-notifications-position='left'
-reduce-panel-spacing=false
+hide-window-titlebars='never'
+notifications-position='right'
+reduce-panel-spacing=true
 restrict-to-primary-screen=false
 show-appmenu-button=true
 show-desktop-name=false
-show-legacy-tray=true
+show-legacy-tray=false
 show-window-buttons='never'
-show-window-title='always'
+show-window-title='never'
 use-activities-text=false
-window-buttons-placement='right'
+window-buttons-placement='auto'
 window-buttons-theme='auto'
 
 [wallhub]
