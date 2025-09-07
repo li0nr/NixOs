@@ -2,7 +2,8 @@
   description = "Li0nr's NixOs flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05"; # update version
 
     # xremap-flake.url = "github:xremap/nix-flake/master";
 

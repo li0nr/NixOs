@@ -110,9 +110,7 @@
    btop-rocm
    libsForQt5.okular
    xorg.xprop #-- need for okular
-   # 3d printing
    # ios sutff 
-   cura-appimage
    libimobiledevice
    ifuse
 ## to restore ios device 
@@ -128,8 +126,8 @@ fonts.packages = with pkgs; [
     font-awesome
     terminus_font
     victor-mono
-    (nerdfonts.override {fonts = ["JetBrainsMono"];}) # stable banch
-    (nerdfonts.override {fonts = ["FantasqueSansMono"];}) # stable banch
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.fantasque-sans-mono
 ];
 
   # List services that you want to enable:
