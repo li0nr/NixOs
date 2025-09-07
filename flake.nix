@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
 
-    xremap-flake.url = "github:xremap/nix-flake/master";
+    # xremap-flake.url = "github:xremap/nix-flake/master";
 
   };
 
@@ -18,7 +18,8 @@
         specialArgs = { inherit inputs; };
         modules = [
             ./hosts/pc/configuration.nix
-            ./modules/services/xremap.nix
+            # ./modules/services/xremap.nix
+            ./modules/services/keyd.nix
             ./modules/services/virt.nix
             ./modules/services/syncthing.nix
             ./modules/nvim.nix

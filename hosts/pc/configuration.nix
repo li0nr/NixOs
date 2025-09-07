@@ -110,6 +110,7 @@
    btop-rocm
    libsForQt5.okular
    xorg.xprop #-- need for okular
+   # 3d printing
    # ios sutff 
    cura-appimage
    libimobiledevice
