@@ -56,6 +56,8 @@
     yelp
     gnome-software
 
+    epiphany # web
+    evince      # document viewer
     # totem #video player app
     # gnome-connections
   ];

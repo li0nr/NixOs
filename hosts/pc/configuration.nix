@@ -110,6 +110,7 @@
    btop-rocm
    libsForQt5.okular
    xorg.xprop #-- need for okular
+   cura-appimage
    # ios sutff 
    libimobiledevice
    ifuse
