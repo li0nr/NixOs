@@ -67,6 +67,7 @@
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
+
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
@@ -86,7 +87,12 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-
+  systemd.sleep.extraConfig = ''
+    AllowSuspend=no
+    AllowHibernation=no
+    AllowHybridSleep=no
+    AllowSuspendThenHibernate=no
+  '';
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -116,6 +122,7 @@
    ifuse
 ## to restore ios device 
 #    idevicerestore
+   cloudflared
   ];
 
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -133,7 +140,7 @@ fonts.packages = with pkgs; [
 
   # List services that you want to enable:
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   #disable the bluethooth on pcie card
   services.udev.extraRules = ''
