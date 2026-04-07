@@ -23,7 +23,8 @@
             ./modules/services/keyd.nix
             ./modules/services/virt.nix
             ./modules/services/syncthing.nix
-            ./modules/services/cloudflared.nix
+            # ./modules/services/cloudflared.nix
+            ./modules/services/netbird.nix
             ./modules/nvim.nix
             ./modules/gnome/gnome.nix
       ];

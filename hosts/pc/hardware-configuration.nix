@@ -24,7 +24,7 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
- fileSystems."/BackUp" =
+ fileSystems."/SSD_kingston" =
    { device = "/dev/disk/by-uuid/06E0D489E0D47FFB";
    };
 

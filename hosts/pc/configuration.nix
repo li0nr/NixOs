@@ -122,7 +122,8 @@
    ifuse
 ## to restore ios device 
 #    idevicerestore
-   cloudflared
+#  cloudflared
+   netbird
   ];
 
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
