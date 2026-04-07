@@ -5,17 +5,12 @@
 { config, pkgs, inputs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = ["ntfs"];
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixos-PC"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -24,24 +19,6 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "Asia/Jerusalem";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_IL";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
@@ -67,25 +44,11 @@
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
-
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
-
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.li0nr = {
-    isNormalUser = true;
-    description = "li0nr";
-    extraGroups = [ "networkmanager" "wheel" ];
-  };
-
   # Install firefox.
   # programs.firefox.enable = true;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   systemd.sleep.extraConfig = ''
     AllowSuspend=no
@@ -96,37 +59,22 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-   neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-   git
-   zsh
    alacritty
    ghostty
-   atuin
-   lazygit
-   zsh
-   bash
-   fzf 
-   tmux
-   starship
    google-chrome
-   zoxide
    slack
    telegram-desktop
    rclone
    btop-rocm
+
    libsForQt5.okular
    xorg.xprop #-- need for okular
    cura-appimage
    # ios sutff 
    libimobiledevice
    ifuse
-## to restore ios device 
-#    idevicerestore
-#  cloudflared
-   netbird
   ];
 
-nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 fonts.packages = with pkgs; [
     fira-code

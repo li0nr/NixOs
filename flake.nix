@@ -3,31 +3,27 @@
 
   inputs = {
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05"; # update version
-
-    # xremap-flake.url = "github:xremap/nix-flake/master";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05"; # update version
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable"; # Unstable
 
   };
 
-  outputs = {nixpkgs, ... } @inputs:
-  let
-    pkgs = nixpkgs.legacyPackages.x86_64-linux;     
-  in
-
-  {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+  outputs = { nixpkgs, nixpkgs-unstable, ... } @ inputs:
+    let
+      # Helper function to reduce boilerplate
+      mkHost = host: nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
-        modules = [
-            ./hosts/pc/configuration.nix
-            # ./modules/services/xremap.nix
-            ./modules/services/keyd.nix
-            ./modules/services/virt.nix
-            ./modules/services/syncthing.nix
-            # ./modules/services/cloudflared.nix
-            ./modules/services/netbird.nix
-            ./modules/nvim.nix
-            ./modules/gnome/gnome.nix
-      ];
+        modules = [ 
+          ./modules/common.nix  # Everything shared (nvim, syncthing, etc)
+          ./hosts/${host}       # The specific machine folder
+        ];
+      };
+    in {
+      nixosConfigurations = {
+        pc  	= mkHost "pc";
+        blade   = mkHost "blade";
+        # laptop = mkHost "laptop"; # Adding a new one is now this easy
+      };
     };
-  };
 }
