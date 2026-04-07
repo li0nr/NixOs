@@ -18,6 +18,7 @@
     tmux
     zoxide
     netbird
+    stow
   ];
 
   # 3. Basic System Settings
