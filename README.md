@@ -9,3 +9,6 @@ to dump the gnome extensions
 
 this does not include the keyboard shortcuts.
 
+## to build
+- sudo nixos-rebuild switch --flake .#blade
+

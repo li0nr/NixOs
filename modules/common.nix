@@ -9,7 +9,7 @@
   environment.systemPackages = with pkgs; [
     git
     htop
-    neovim 
+    #neovim 
     bash
     zsh
     atuin
