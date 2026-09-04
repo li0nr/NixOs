@@ -5,6 +5,7 @@
     
     # Machine-specific modules from your original list
     ../../modules/services/keyd.nix
+    ../../modules/services/timerd.nix
     ../../modules/services/virt.nix
     ../../modules/gnome/gnome.nix
   ];
