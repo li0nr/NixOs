@@ -9,7 +9,7 @@
   environment.systemPackages = with pkgs; [
     git
     htop
-    #neovim 
+    neovim
     bash
     zsh
     atuin
@@ -49,5 +49,4 @@
     # openssh.authorizedKeys.keys = [ "ssh-ed25519 ..." ]; # Add your SSH key here
   };
 }
-
 
