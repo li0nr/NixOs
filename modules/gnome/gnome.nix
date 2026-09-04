@@ -2,8 +2,8 @@
 {
   # programs.hyprland.enable = true; # enable Hyprland
 
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
 
   services.accounts-daemon.enable = true;
   services.gnome.gnome-online-accounts.enable = true;

@@ -31,7 +31,7 @@
   # Configure keymap in X11
   services.xserver = {
   xkb.layout = "us,il";
-  xkbVariant = "";
+  xkb.variant = "";
   # xkbOptions = "grp:win_space_toggle";
   # gsettings reset org.gnome.desktop.input-sources xkb-options
   # gsettings reset org.gnome.desktop.input-sources sources
@@ -67,7 +67,7 @@
    rclone
    btop-rocm
 
-   libsForQt5.okular
+   kdePackages.okular
    xorg.xprop #-- need for okular
    cura-appimage
    # ios sutff 
