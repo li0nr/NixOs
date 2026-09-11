@@ -68,7 +68,7 @@
    btop-rocm
 
    kdePackages.okular
-   xorg.xprop #-- need for okular
+   xprop #-- need for okular
    cura-appimage
    # ios sutff 
    libimobiledevice
