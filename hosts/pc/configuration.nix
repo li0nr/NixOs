@@ -107,12 +107,10 @@ fonts.packages = with pkgs; [
     # here, NOT in environment.systemPackages
     libgudev
     gcc_multi
-    dub
     libadwaita
     libimobiledevice
     libplist
     harfbuzz
-    dmd
   ];
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
