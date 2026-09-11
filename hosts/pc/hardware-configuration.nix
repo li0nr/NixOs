@@ -24,9 +24,10 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
- fileSystems."/SSD_kingston" =
-   { device = "/dev/disk/by-uuid/06E0D489E0D47FFB";
-   };
+  fileSystems."/SSD_kingston" =
+    { device = "/dev/disk/by-uuid/06E0D489E0D47FFB";
+      fsType = "ntfs";
+    };
 
   swapDevices =
     [ { device = "/dev/disk/by-uuid/629a7c53-6268-4504-92dc-d0ed9255bdae"; }
